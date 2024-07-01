@@ -48,7 +48,7 @@ class ChatInstance:
                 if item.endswith("[LIMIT_CONVERSATION]"):
                     raise ConversationOver
                 break
-            out += json.loads(item).get("message", "")
+            out += json.loads(item).get("message", "").encode("latin-1").decode()
 
         self.transcript.append({"role": "assistant", "content": out})
         return out
@@ -57,6 +57,6 @@ class ChatInstance:
 if __name__ == "__main__":
     import readline
 
-    chat = ChatInstance(ChatModel.claude)
+    chat = ChatInstance(ChatModel.llama)
     while True:
         print(chat.chat(input("> ")))
