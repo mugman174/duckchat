@@ -13,7 +13,7 @@ class ConversationOver(Exception):
 class ChatModel:
     """Available models for chat."""
     claude = "claude-3-haiku-20240307"
-    gpt = "gpt-3.5-turbo-0125"
+    gpt = "gpt-4o-mini"
     llama = "meta-llama/Llama-3-70b-chat-hf"
     mistral = "mistralai/Mixtral-8x7B-Instruct-v0.1"
 
@@ -57,6 +57,6 @@ class ChatInstance:
 if __name__ == "__main__":
     import readline
 
-    chat = ChatInstance(ChatModel.llama)
+    chat = ChatInstance(ChatModel.gpt)
     while True:
         print(chat.chat(input("> ")))
