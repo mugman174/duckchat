@@ -16,7 +16,7 @@ class ChatModel:
     gpt = "gpt-4o-mini"
     llama = "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo"
     mistral = "mistralai/Mixtral-8x7B-Instruct-v0.1"
-
+    o3 = "o3-mini"
 
 class ChatInstance:
     def __init__(self, model: str):
@@ -57,6 +57,6 @@ class ChatInstance:
 if __name__ == "__main__":
     import readline
 
-    chat = ChatInstance(ChatModel.gpt)
+    chat = ChatInstance(ChatModel.o3)
     while True:
         print(chat.chat(input("> ")))
