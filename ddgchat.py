@@ -14,8 +14,8 @@ class ChatModel:
     """Available models for chat."""
     claude = "claude-3-haiku-20240307"
     gpt = "gpt-4o-mini"
-    llama = "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo"
-    mistral = "mistralai/Mixtral-8x7B-Instruct-v0.1"
+    llama = "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+    mistral = "mistralai/Mistral-Small-24B-Instruct-2501"
     o3 = "o3-mini"
 
 class ChatInstance:
